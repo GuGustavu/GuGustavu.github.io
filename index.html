@@ -3,43 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste de imagens</title>
+    <title>Teste</title>
     <style>
-        body{
-            background-image: url(imagens/wallpaper001.jpg);
+        
+        html, body{
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 98%;
+            padding: 0; margin: 0; border: 0;
+            height: 100%;
+            background-color: #F7F7F7;
+            user-select: none;
         }
-        div.quadrado{
-            display: inline-block;
-            border: 1px solid black;
-            border-radius: 10px;
-            background-color: lightgoldenrodyellow;
-            width: 300px;
-            height: 300px;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.226);
+        .cabeçalho{
+            z-index: 12;
+            width: 100%;
+            height: 48px;
+            background-color: white;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+            display: block;
+            position: absolute;
         }
-        div#q1{
-            background-color: skyblue;
+        .imagem{
+            display: inline-flex;
+            width: auto;
+            height: 81%;
+            padding-left: 5px;
         }
-        div#q2{
-            background-image: linear-gradient(to bottom, yellow,red);
+        .main-menu {
+            width: 47px;
+            height: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
         }
-        div#q3{
-            background-image: url("imagens/pattern001.png");
+        .menu-fixo{
+            z-index: 11;
+            height: 100%;
+            width: 48px;
+            background-color: #122D6C;
+            position: fixed;
+        }
+        .container{
+            z-index: 10;
+            width: 238px;
+            height: 100%;
+            background-color: white;
+            box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 50px;
+            transition: .1s;
+        }     
+        .btn svg{
+            padding: 0 9px;
+        }
+        .menu{
+            height: 70px;
+            border-bottom: .5px solid rgba(0, 0, 0, 0.007);
+            color: #008CE5;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .btn{
+
+            height: 48px;
+            display: flex;
+            justify-content: flex-end;
+
+        } 
+        .container :hover{
+            padding-left: 0px;
+            background-color: #F1F1F1;
+            transition: .2s;
+        }
+        .menu-fixo :hover{
+            background-color: #0d204d;
+        }
+        .primeiro{
+            margin-top: 48px
+        }
+        .icon{
+            flex: 1;
+            min-width: none;
+            max-width: none;
+        }
+        .txt{
+            flex: 5;
+            padding-left: 5px;
+        }
+        .oculto{
+            width:48px;
+        }
+
+        .oculto .txt{
+            display: none;
+        }
+        .oculto .btn svg{
+            transform: rotate(180deg);
+
+        }
+        .perfil{
+            display: inline-flex;
+            position: absolute;
+            right: 20px;
+            top: 8px;
+        }
+        .hover :hover{
+            fill: #008CE5;
+            transition: .1s;
+            cursor: pointer;
+        }
+        .notificações{
+            display: inline-flex;
+            position: absolute;
+            right: 68px;
+            top: 8px;
+        }
+        .novidades{
+            display: inline-flex;
+            position: absolute;
+            right: 116px;
+            top: 8px;
+        }
+        .pesquisa{
+            display: inline-flex;
+            position: absolute;
+            right: 164px;
+            top: 8px;
         }
     </style>
 </head>
 <body>
-    <div class="quadrado" id="q1">
+    <div class="cabeçalho">
+        <div class="main-menu hover">
 
+            <svg class="icon-main" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#122D6C" viewBox="0 0 256 256"><path d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z"></path></svg>
+        </div>
+        <div class="imagem hover">
+            <img src="cropped-catagua-construtora.webp">
+        </div>
+        <div class="perfil hover">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>
+        </div>
+        <div class="notificações hover">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path></svg>
+        </div>
+        <div class="novidades hover">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M88,112a8,8,0,0,1,8-8h80a8,8,0,0,1,0,16H96A8,8,0,0,1,88,112Zm8,40h80a8,8,0,0,0,0-16H96a8,8,0,0,0,0,16ZM232,64V184a24,24,0,0,1-24,24H32A24,24,0,0,1,8,184.11V88a8,8,0,0,1,16,0v96a8,8,0,0,0,16,0V64A16,16,0,0,1,56,48H216A16,16,0,0,1,232,64Zm-16,0H56V184a23.84,23.84,0,0,1-1.37,8H208a8,8,0,0,0,8-8Z"></path></svg>
+        </div>
+        <div class="pesquisa hover">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+        </div>
     </div>
-    <div class="quadrado" id="q2">
+    <div class="menu-fixo">
+        <div class="menu btn primeiro">
 
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+
+        </div>
+        <div class="menu btn">
+
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z"></path></svg>
+
+        </div>
+        <div class="menu btn">
+
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"></path></svg>
+
+        </div>
     </div>
-    <div class="quadrado" id="q3">
+    <div class="container oculto">
+        
+        <div class="menu primeiro ">
+            
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#008CE5"  viewBox="0 0 256 256"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-40-64a8,8,0,0,1-8,8H136v16a8,8,0,0,1-16,0V160H104a8,8,0,0,1,0-16h16V128a8,8,0,0,1,16,0v16h16A8,8,0,0,1,160,152Z"></path></svg> 
+            
+            <div class="txt">Gerar lançamento</div>
+        </div>
+        <div class="menu ">
 
-    </div>
-    <div class="quadrado">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#008CE5"  viewBox="0 0 256 256"><path d="M224,48V208a16,16,0,0,1-16,16H136a8,8,0,0,1,0-16h72V48H48v96a8,8,0,0,1-16,0V48A16,16,0,0,1,48,32H208A16,16,0,0,1,224,48ZM125.66,154.34a8,8,0,0,0-11.32,0L64,204.69,45.66,186.34a8,8,0,0,0-11.32,11.32l24,24a8,8,0,0,0,11.32,0l56-56A8,8,0,0,0,125.66,154.34Z"></path></svg>
 
+            <div class="txt">Para aprovação</div>
+        </div>
+        <div class="menu ">
+
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#008CE5"  viewBox="0 0 256 256"><path #008CE5 d="M229.66,58.34l-32-32a8,8,0,0,0-11.32,0l-96,96A8,8,0,0,0,88,128v32a8,8,0,0,0,8,8h32a8,8,0,0,0,5.66-2.34l96-96A8,8,0,0,0,229.66,58.34ZM124.69,152H104V131.31l64-64L188.69,88ZM200,76.69,179.31,56,192,43.31,212.69,64ZM224,120v88a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h88a8,8,0,0,1,0,16H48V208H208V120a8,8,0,0,1,16,0Z"></path></svg>
+
+            <div class="txt">Para digitação</div>
+        </div>
+        <div class="menu ">
+
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#008CE5"  viewBox="0 0 256 256"><path  d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H208V208ZM165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+
+            <div class="txt">Rejeitadas</div>
+        </div>
+        <div class="menu ">
+
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#008CE5"  viewBox="0 0 256 256"><path d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.69,147.32,64l24-24L216,84.69Z"></path></svg>
+
+            <div class="txt">Workflow</div>
+        </div>
+        <div class="menu ">
+
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#008CE5"  viewBox="0 0 256 256"><path d="M136,80v43.47l36.12,21.67a8,8,0,0,1-8.24,13.72l-40-24A8,8,0,0,1,120,128V80a8,8,0,0,1,16,0Zm-8-48A95.44,95.44,0,0,0,60.08,60.15C52.81,67.51,46.35,74.59,40,82V64a8,8,0,0,0-16,0v40a8,8,0,0,0,8,8H72a8,8,0,0,0,0-16H49c7.15-8.42,14.27-16.35,22.39-24.57a80,80,0,1,1,1.66,114.75,8,8,0,1,0-11,11.64A96,96,0,1,0,128,32Z"></path></svg>
+
+            <div class="txt">Seu Histórico</div>
+        </div>
+        <div class="menu ">
+
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#008CE5"  viewBox="0 0 256 256"><path d="M232,136.66A104.12,104.12,0,1,1,119.34,24,8,8,0,0,1,120.66,40,88.12,88.12,0,1,0,216,135.34,8,8,0,0,1,232,136.66ZM120,72v56a8,8,0,0,0,8,8h56a8,8,0,0,0,0-16H136V72a8,8,0,0,0-16,0Zm40-24a12,12,0,1,0-12-12A12,12,0,0,0,160,48Zm36,24a12,12,0,1,0-12-12A12,12,0,0,0,196,72Zm24,36a12,12,0,1,0-12-12A12,12,0,0,0,220,108Z"></path></svg>
+
+            <div class="txt">Histórico</div>
+        </div>
+        <script>
+            var arrow = document.querySelector(".arrow");
+            var container = document.querySelector('.container');
+
+            arrow.onclick = e =>{
+                if(!container.classList.contains('oculto')){
+                    container.classList.add('oculto');
+                }else{
+                    container.classList.remove('oculto');
+                }
+            }
+        </script>
+        
     </div>
 </body>
 </html>
