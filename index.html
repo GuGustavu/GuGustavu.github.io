@@ -149,18 +149,47 @@
             transition: .1s;
         }
         .main-menu-full{
-            width: 600px;
-            height: 600px;
-            background-color: black;
+            position: fixed;
+            width: 280px;
+            height: 300px;
+            border-radius: 0 0 1% 1%;
+            box-shadow:1px 1px 10px rgba(0, 0, 0, 0.5);
+            background-color: rgba(255, 255, 255, 0.993);
+            transition: .1s;
+            opacity: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            padding: 8px 16px 24px 16px;
+            
         }
         .oculto{
             width:48px;
         }
         .oculto2{
             z-index: 1;
-            width:0px;
+            width: -100px;
             height: 0px;
+            padding: 0px;
+            opacity: 0%;
             
+            
+        }
+        .outros{
+            background-color: #7a7a7a;
+            width: 90px;
+            height: 90px;
+            border-radius: 25%;
+            margin: auto;
+            flex-shrink: 0;
+        }
+        .Titulo{
+            width: 100%;
+            font-family:sans-serif;
+            text-align: center;
+            font-size: larger;
+            padding: 10px;
+
         }
     </style>
 </head>
@@ -185,7 +214,15 @@
         <div class="pesquisa hover">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
         </div>
-        <div class="main-menu-full oculto2"></div>
+        <div class="main-menu-full oculto2">
+            <div class="Titulo">Plataforma Catagua</div>
+            <div class="outros"></div>
+            <div class="outros"></div>
+            <div class="outros"></div>
+            <div class="outros"></div>
+            <div class="outros"></div>
+            <div class="outros"></div>
+        </div>
         <script>
             var mainMenu = document.querySelector(".main-menu");
             var mainMenuFull = document.querySelector('.main-menu-full');
@@ -193,9 +230,12 @@
             mainMenu.onclick = e =>{
                 if(!mainMenuFull.classList.contains('oculto2')){
                     mainMenuFull.classList.add('oculto2');
+                    outros.classList.add('oculto2');
                 }else{
                     mainMenuFull.classList.remove('oculto2');
+                    outros.classList.remove('oculto2')
                 }
+            
             }
         </script>
         
